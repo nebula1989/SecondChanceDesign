@@ -1,0 +1,160 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Presentation {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block body_class %} index-page {% endblock body_class %}
+
+{% block content %}
+
+    <header class="header-2">
+        <div class="page-header section-height-75 relative"
+             style="background-image: url('{{ ASSETS_ROOT }}/img/wood_bg_cover.jpg'); opacity: 70%">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 text-center mx-auto">
+                        <h1 class="text-white pt-3 mt-n5"
+                            style="font-size: xxx-large">
+                            <a class="text-white" target="_blank"
+                               href="https://appseed.us/ui-kit/soft-ui-design-system">Second Chance Design</a>
+
+                        </h1>
+                        <p class="lead text-white mt-3">
+                            By Emily
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- END Section Content -->
+    <!-- -------   START PRE-FOOTER 2 - simple social line w/ title & 3 buttons    -------- -->
+
+    <div class="pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 ms-auto">
+                    <h4 class="mb-1">Furniture and Antique Restoration</h4>
+                    <p class="lead mb-0">Bringing the life back into your dead relative's treasures.</p>
+                </div>
+                <div class="col-lg-5 me-lg-auto my-lg-auto text-lg-right mt-5">
+                    <a href="https://www.facebook.com/profile.php?id=100083005111070"
+                       class="btn btn-info mb-0 me-2" target="_blank">
+                        <i class="fab fa-facebook-square me-1"></i>
+                    </a>
+                    <a href="#"
+                       class="btn btn-primary mb-0 me-2" target="_blank">
+                        <i class="fab fa-instagram me-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------   END PRE-FOOTER 2 - simple social line w/ title & 3 buttons    -------- -->
+
+    <section class="py-7">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mx-auto text-center">
+          <h2 class="mb-0">Testimonies</h2>
+          <p class="lead">People all over the triangle enjoy our services.</p>
+        </div>
+      </div>
+      <div class="row mt-6">
+        <div class="col-lg-4 col-md-8">
+          <div class="card card-plain">
+            <div class="card-body">
+              <div class="author">
+                <div class="name">
+                  <h6 class="mb-0 font-weight-bolder">First Last</h6>
+                  <div class="stats">
+                    <i class="far fa-clock"></i> 1 day ago
+                  </div>
+                </div>
+              </div>
+              <p class="mt-4">"This is an excellent service, Emily can make anything look new again."</p>
+              <div class="rating mt-3">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-8">
+          <div class="card card-plain">
+            <div class="card-body">
+              <div class="author">
+                <div class="name">
+                  <h6 class="mb-0 font-weight-bolder">First Last</h6>
+                  <div class="stats">
+                    <i class="far fa-clock"></i> 3 weeks ago
+                  </div>
+                </div>
+              </div>
+              <p class="mt-4">"Great service. My great great great ma Mildred's butt spankin' paddle was all torn to shit but Emily restored so well that now I can keep the ass whippin goin for generations!."</p>
+              <div class="rating mt-3">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="horizontal dark my-5">
+    </div>
+    </section>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE -->
+{% block javascripts %}
+
+    <script src="{{ ASSETS_ROOT }}/js/plugins/countup.min.js"></script>
+    <script src="{{ ASSETS_ROOT }}/js/plugins/choices.min.js"></script>
+    <script src="{{ ASSETS_ROOT }}/js/plugins/rellax.min.js"></script>
+    <script src="{{ ASSETS_ROOT }}/js/plugins/tilt.min.js"></script>
+    <script src="{{ ASSETS_ROOT }}/js/plugins/choices.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+    <script src="{{ ASSETS_ROOT }}/js/soft-design-system.min.js?v=1.0.1" type="text/javascript"></script>
+    <script type="text/javascript">
+        if (document.getElementById('state1')) {
+            const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+            if (!countUp.error) {
+                countUp.start();
+            } else {
+                console.error(countUp.error);
+            }
+        }
+        if (document.getElementById('state2')) {
+            const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+            if (!countUp1.error) {
+                countUp1.start();
+            } else {
+                console.error(countUp1.error);
+            }
+        }
+        if (document.getElementById('state3')) {
+            const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+            if (!countUp2.error) {
+                countUp2.start();
+            } else {
+                console.error(countUp2.error);
+            }
+            ;
+        }
+    </script>
+
+{% endblock javascripts %}
