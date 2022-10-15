@@ -1,35 +1,34 @@
 {% extends 'layouts/base.html' %}
 
-{% block title %} Presentation {% endblock title %}
+{% block title %} Home {% endblock title %}
 
 <!-- Specific CSS goes HERE -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}
+    <link href="{{ ASSETS_ROOT }}/css/index_styles.css" rel="stylesheet"/>{% endblock stylesheets %}
 
 {% block body_class %} index-page {% endblock body_class %}
 
 {% block content %}
 
-    <header class="header-2">
-        <div class="page-header section-height-75 relative"
-             style="background-image: url('{{ ASSETS_ROOT }}/img/wood_bg_cover.jpg'); opacity: 70%">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 text-center mx-auto">
-                        <h1 class="text-white pt-3 mt-n5"
-                            style="font-size: xxx-large">
-                            <a class="text-white" target="_blank"
-                               href="https://appseed.us/ui-kit/soft-ui-design-system">Second Chance Design</a>
-
-                        </h1>
-                        <p class="lead text-white mt-3">
-                            By Emily
-                        </p>
-                    </div>
-                </div>
-            </div>
-
+    <header class="header-2" style="padding: 1%">
+        <div class="page-header section-height-75 relative">
+            <img src="{{ ASSETS_ROOT }}/img/SecondChanceHeaderPic.png" id="header-pic"
+                 alt="Second Chance Designs Header Image">
         </div>
     </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 text-center mx-auto">
+                <h1 class="text-white pt-3 mt-n5"
+                    style="font-size: xxx-large">
+                    <a class="text-black" target="_blank"
+                       href="#"></a>
+                </h1>
+
+            </div>
+        </div>
+    </div>
 
 
     <!-- END Section Content -->
@@ -38,83 +37,140 @@
     <div class="pt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 ms-auto">
-                    <h4 class="mb-1">Furniture and Antique Restoration</h4>
-                    <p class="lead mb-0">Bringing the life back into your dead relative's treasures.</p>
+                <div class="col ms-auto text-center">
+                    <h4 class="mb-1">Furniture Restoration & Custom Designs</h4>
+                    <p class="lead mb-0">Keeping Memories Alive</p>
                 </div>
-                <div class="col-lg-5 me-lg-auto my-lg-auto text-lg-right mt-5">
-                    <a href="https://www.facebook.com/profile.php?id=100083005111070"
-                       class="btn btn-info mb-0 me-2" target="_blank">
-                        <i class="fab fa-facebook-square me-1"></i>
-                    </a>
-                    <a href="#"
-                       class="btn btn-primary mb-0 me-2" target="_blank">
-                        <i class="fab fa-instagram me-1"></i>
-                    </a>
-                </div>
+
             </div>
         </div>
     </div>
     <!-- -------   END PRE-FOOTER 2 - simple social line w/ title & 3 buttons    -------- -->
 
-    <section class="py-7">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 mx-auto text-center">
-          <h2 class="mb-0">Testimonies</h2>
-          <p class="lead">People all over the triangle enjoy our services.</p>
-        </div>
-      </div>
-      <div class="row mt-6">
-        <div class="col-lg-4 col-md-8">
-          <div class="card card-plain">
-            <div class="card-body">
-              <div class="author">
-                <div class="name">
-                  <h6 class="mb-0 font-weight-bolder">First Last</h6>
-                  <div class="stats">
-                    <i class="far fa-clock"></i> 1 day ago
-                  </div>
+    <div class="container text-center w-lg-50 " style="background-color: white; padding: 2%">
+
+        <!-- Before After Gallery -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ ASSETS_ROOT }}/img/before_after/table_before_after.jpg" class="d-block w-100" alt="2nd slide">
                 </div>
-              </div>
-              <p class="mt-4">"This is an excellent service, Emily can make anything look new again."</p>
-              <div class="rating mt-3">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
+                <div class="carousel-item">
+                    <img src="{{ ASSETS_ROOT }}/img/before_after/rocking_chair_before_after.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ ASSETS_ROOT }}/img/before_after/wardrobe_before_after.jpg" class="d-block w-100" alt="...">
+                </div>
             </div>
-          </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                <span class="visible">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                <span class="visible">Next</span>
+            </button>
         </div>
 
-        <div class="col-lg-4 col-md-8">
-          <div class="card card-plain">
-            <div class="card-body">
-              <div class="author">
-                <div class="name">
-                  <h6 class="mb-0 font-weight-bolder">First Last</h6>
-                  <div class="stats">
-                    <i class="far fa-clock"></i> 3 weeks ago
-                  </div>
-                </div>
-              </div>
-              <p class="mt-4">"Great service. My great great great ma Mildred's butt spankin' paddle was all torn to shit but Emily restored so well that now I can keep the ass whippin goin for generations!."</p>
-              <div class="rating mt-3">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr class="horizontal dark my-5">
     </div>
+
+    <!-- Testimonies -->
+    <section class="py-7">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto text-center">
+                    <h2 class="mb-0">Testimonies</h2>
+                    <p class="lead">People all over the triangle enjoy our services.</p>
+                </div>
+            </div>
+            <div class="row mt-6">
+                <div class="col-lg-4 col-md-8">
+                    <div class="card card-plain">
+                        <div class="card-body">
+                            <div class="author">
+                                <div class="name">
+                                    <h6 class="mb-0 font-weight-bolder">First Last</h6>
+                                    <div class="stats">
+                                        <i class="far fa-clock"></i> 1 day ago
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-4">"This is an excellent service, Emily can make anything look new again."</p>
+                            <div class="rating mt-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-8">
+                    <div class="card card-plain">
+                        <div class="card-body">
+                            <div class="author">
+                                <div class="name">
+                                    <h6 class="mb-0 font-weight-bolder">First Last</h6>
+                                    <div class="stats">
+                                        <i class="far fa-clock"></i> 3 weeks ago
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-4">"THIS IS A REVIEW TEXT"</p>
+                            <div class="rating mt-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-8">
+                    <div class="card card-plain">
+                        <div class="card-body">
+                            <div class="author">
+                                <div class="name">
+                                    <h6 class="mb-0 font-weight-bolder">First Last</h6>
+                                    <div class="stats">
+                                        <i class="far fa-clock"></i> 3 weeks ago
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-4">"THIS IS A REVIEW TEXT"</p>
+                            <div class="rating mt-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="horizontal dark my-5">
+        </div>
     </section>
+
+    <!-- Social Media Buttons -->
+    <div class="d-flex justify-content-center">
+        <a href="https://www.facebook.com/profile.php?id=100083005111070"
+           class="btn btn-info" target="_blank">
+            <i class="fab fa-facebook-square me-1"></i>
+        </a>
+        <a href="#"
+           class="btn btn-primary" target="_blank">
+            <i class="fab fa-instagram me-1"></i>
+        </a>
+    </div>
 
 {% endblock content %}
 
