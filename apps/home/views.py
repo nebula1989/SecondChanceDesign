@@ -6,16 +6,17 @@ Copyright (c) 2019 - present AppSeed.us
 from django import template
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render
 from django.template import loader
 from django.urls import reverse
 
 
-#@login_required(login_url="/login/")
 def index(request):
-    context = {'segment': 'index'}
+    context = {
+        'segment': 'index',
+    }
 
-    html_template = loader.get_template('home/index.html')
-    return HttpResponse(html_template.render(context, request))
+    return render(request, 'home/index.html', context)
 
 
 @login_required(login_url="/login/")
@@ -42,3 +43,11 @@ def pages(request):
     except:
         html_template = loader.get_template('home/page-500.html')
         return HttpResponse(html_template.render(context, request))
+
+
+def about(request):
+    context = {
+        'segment': 'about',
+    }
+
+    return render(request, 'home/page-about-us.html', context)
