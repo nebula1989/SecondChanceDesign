@@ -1,7 +1,7 @@
 version: '3.8'
 services:
-  appseed-app:
-    container_name: appseed_app
+  secondchancedesign-app:
+    container_name: secondchancedesign-app
     restart: always
     env_file: .env
     build: .
@@ -13,13 +13,13 @@ services:
     restart: always
     image: "nginx:latest"
     ports:
-      - "5085:5085"
+      - "80:80"
     volumes:
       - ./nginx:/etc/nginx/conf.d
     networks:
       - web_network
     depends_on: 
-      - appseed-app
+      - secondchancedesign-app
 networks:
   db_network:
     driver: bridge
