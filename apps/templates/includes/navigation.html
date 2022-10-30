@@ -1,7 +1,8 @@
-{% block stylesheets %}<link href="{{ ASSETS_ROOT }}/css/base_styles.css" rel="stylesheet"/>{% endblock stylesheets %}
+{% block stylesheets %}
+    <link href="{{ ASSETS_ROOT }}/css/base_styles.css" rel="stylesheet"/>{% endblock stylesheets %}
 
 <div class="container position-sticky z-index-sticky top-0">
-    <div class="row" >
+    <div class="row">
         <div class="col-12">
             <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed  position-absolute my-3 py-2 start-0 end-0 mx-4">
                 <div class="container-fluid text-center" id="navstyle">
@@ -23,17 +24,19 @@
                     <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0" id="navigation">
                         <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
 
-                            <li class="nav-item dropdown dropdown-hover mx-2">
-                                <a href="{% url 'home' %}#examples" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                   aria-expanded="false">
-                                    See Our Work
+
+                            <li class="nav-item ms-lg-auto">
+                                <a class="nav-link nav-link-icon me-2" href="{% url 'home' %}#examples">
+                                    <p class="d-inline text-sm z-index-1 font-weight-normal">
+                                        See Our Work.
+                                    </p>
                                 </a>
                             </li>
 
-                            <li class="nav-item dropdown dropdown-hover mx-2">
-                                <a href="{% url 'about' %}" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                   aria-expanded="false">
-                                    About Us
+                            <li class="nav-item ms-lg-auto">
+                                <a class="nav-link nav-link-icon me-2" href="{% url 'about' %}">
+                                    <p class="d-inline text-sm z-index-1 font-weight-normal">
+                                        About Us</p>
                                 </a>
                             </li>
 
@@ -51,6 +54,25 @@
                                     <p class="d-inline text-sm z-index-1 font-weight-normal"
                                        data-bs-toggle="tooltip"
                                        data-bs-placement="top" title="Email">emily@secondchance.design</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ms-lg-auto">
+                                <a class="nav-link nav-link-icon me-2"
+                                   href="https://www.facebook.com/profile.php?id=100083005111070">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <p class="d-inline text-sm z-index-1 font-weight-normal"
+                                       data-bs-toggle="tooltip"
+                                       data-bs-placement="top" title="FB"></p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ms-lg-auto">
+                                <a class="nav-link nav-link-icon me-2" href="#">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <p class="d-inline text-sm z-index-1 font-weight-normal"
+                                       data-bs-toggle="tooltip"
+                                       data-bs-placement="top" title="Insta"></p>
                                 </a>
                             </li>
 

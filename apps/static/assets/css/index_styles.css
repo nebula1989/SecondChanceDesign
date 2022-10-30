@@ -1,6 +1,10 @@
-#header-pic {display: block;
+#header-pic {
+  display: block;
   max-width: 100%;
   height: auto;
+}
 
+#gallery_btns {
+  color: black;
 }
 
