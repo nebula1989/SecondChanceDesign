@@ -51,3 +51,7 @@ def about(request):
     }
 
     return render(request, 'home/page-about-us.html', context)
+
+
+def error_404(request, exception):
+    return render(request, 'home/page-404.html')

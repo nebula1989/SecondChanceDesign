@@ -2,7 +2,6 @@
 """
 Copyright (c) 2019 - present AppSeed.us
 """
-
 from django.urls import path, re_path
 from apps.home import views
 
@@ -16,3 +15,5 @@ urlpatterns = [
     #re_path(r'^.*\.*', views.pages, name='pages'),
 
 ]
+
+handler404 = 'apps.home.views.error_404'
