@@ -14,9 +14,10 @@
 {% block content %}
     <header class="header-2" style="padding: 5%">
         <div class="page-header section-height-50 relative">
-            <img src="{{ ASSETS_ROOT }}/img/SecondChanceHeaderPic.png" id="header-pic"
+            <img src="{{ ASSETS_ROOT }}/img/SC-Magnet.PNG" id="header-pic"
                  alt="Second Chance Designs Header Image">
         </div>
+
     </header>
 
     <div class="container">
@@ -40,12 +41,8 @@
         <div class="container">
             <div class="row">
                 <div class="col ms-auto text-center">
-                    <h1>Second Chance Design</h1>
-                    <h2 class="mb-1" id="examples">Furniture Refinishing</h2>
-                    <h3 class="lead mb-0">Keeping Memories Alive</h3>
-                    <p class="p-0">Second Chance Design provides custom furniture refinishing services in Raleigh, NC
-                        and
-                        the surrounding areas.</p>
+                    <p class="mt-4 font-weight-light">Second Chance Design provides custom furniture refinishing services in Raleigh, NC
+                        and the surrounding areas.</p>
                 </div>
 
             </div>
@@ -83,8 +80,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto text-center">
-                    <h2 class="mb-0">Testimonies</h2>
-                    <p class="lead">People all over the triangle enjoy our services.</p>
+                    <h2 class="blue mb-0">Testimonies</h2>
+                    <p class="purple lead">People all over the triangle enjoy our services.</p>
                 </div>
             </div>
             <div class="row mt-6">
@@ -289,32 +286,7 @@
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
     <script src="{{ ASSETS_ROOT }}/js/soft-design-system.min.js?v=1.0.1" type="text/javascript"></script>
-    <script type="text/javascript">
-        if (document.getElementById('state1')) {
-            const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
-            if (!countUp.error) {
-                countUp.start();
-            } else {
-                console.error(countUp.error);
-            }
-        }
-        if (document.getElementById('state2')) {
-            const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
-            if (!countUp1.error) {
-                countUp1.start();
-            } else {
-                console.error(countUp1.error);
-            }
-        }
-        if (document.getElementById('state3')) {
-            const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
-            if (!countUp2.error) {
-                countUp2.start();
-            } else {
-                console.error(countUp2.error);
-            }
-            ;
-        }
-    </script>
+
 
 {% endblock javascripts %}
+</div>
