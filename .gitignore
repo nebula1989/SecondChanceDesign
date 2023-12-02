@@ -5,6 +5,7 @@ staticfiles/
 __pycache__/
 *.py[cod]
 *$py.class
+core/settings/local_config.json
 
 # C extensions
 *.so
