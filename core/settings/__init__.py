@@ -1,6 +1,6 @@
 import json
 
-CONFIG_FILE = 'C:\\Users\\benwa\\Documents\\My Programming\\SecondChanceDesign\\core\\settings\\local_config.json'
+CONFIG_FILE = '/etc/secondchance_config.json'
 
 try:
     with open(CONFIG_FILE) as config_file:
