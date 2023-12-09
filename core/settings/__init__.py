@@ -1,4 +1,5 @@
 import json
+
 import platform
 
 def detect_os():
