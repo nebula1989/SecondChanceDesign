@@ -1,6 +1,6 @@
 import json
-
 import platform
+from distro import linux_distribution
 
 def detect_os():
     system = platform.system()
@@ -11,12 +11,14 @@ def detect_os():
         # Your Windows-specific code here
         
     elif system == 'Linux':
-        distro = platform.linux_distribution()
-        if 'Ubuntu' in distro:
+        distro_info = linux_distribution(full_distribution_name=False)
+        distro_name = distro_info[0]  # Get the distribution name
+    
+        if 'Ubuntu' in distro_name:
             # Do something for Ubuntu
             config_file = '/etc/secondchance_config.json'
             # Your Ubuntu-specific code here
-        
+            
     else:
         print("Unknown or unsupported operating system")
 
