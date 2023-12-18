@@ -9,18 +9,9 @@ def detect_os():
         # Do something for Windows
         config_file = "C:\\Users\\benwa\\etc\\secondchance_config.json"
         # Your Windows-specific code here
-        
-    elif system == 'Linux':
-        distro_info = linux_distribution(full_distribution_name=False)
-        distro_name = distro_info[0]  # Get the distribution name
-    
-        if 'Ubuntu' in distro_name:
-            # Do something for Ubuntu
-            config_file = '/etc/secondchance_config.json'
-            # Your Ubuntu-specific code here
             
     else:
-        print("Unknown or unsupported operating system")
+        config_file = '/etc/secondchance_config.json'
 
     return config_file
 
