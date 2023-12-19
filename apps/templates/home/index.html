@@ -50,7 +50,7 @@
     </div>
     <!-- -------   END PRE-FOOTER 2 - simple social line w/ title & 3 buttons    -------- -->
 
-    <div class="container text-center w-lg-50 " style="background-color: white; padding: 2%">
+    <div class="container text-center w-lg-50" id="examples" style="background-color: white; padding: 2%">
 
     <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
     <div class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;"
@@ -269,8 +269,6 @@
                 </p>
             </div>
         </div>
-
-
     </div>
 
 {% endblock content %}
@@ -278,15 +276,8 @@
 <!-- Specific JS goes HERE -->
 {% block javascripts %}
 
-    <script src="{{ ASSETS_ROOT }}/js/plugins/countup.min.js"></script>
-    <script src="{{ ASSETS_ROOT }}/js/plugins/choices.min.js"></script>
-    <script src="{{ ASSETS_ROOT }}/js/plugins/rellax.min.js"></script>
-    <script src="{{ ASSETS_ROOT }}/js/plugins/tilt.min.js"></script>
-    <script src="{{ ASSETS_ROOT }}/js/plugins/choices.min.js"></script>
-
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-    <script src="{{ ASSETS_ROOT }}/js/soft-design-system.min.js?v=1.0.1" type="text/javascript"></script>
-
+    <script src="{{ ASSETS_ROOT }}/js/soft-design-system.min.js?v=1.0.1" type="text/javascript"></script
 
 {% endblock javascripts %}
 </div>
