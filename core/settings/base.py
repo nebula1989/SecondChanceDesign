@@ -17,7 +17,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.home'  # Enable the inner home (home)
+    'apps.home',  # Enable the inner home (home)
+    'apps.photo'
 ]
 
 MIDDLEWARE = [
@@ -121,6 +122,9 @@ STATICFILES_DIRS = (
     os.path.join(CORE_DIR, '../apps/static'),
 )
 
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 #############################################################
