@@ -6,6 +6,7 @@ Django==5.0
 django-environ==0.11.2
 gunicorn==21.2.0
 packaging==23.2
+Pillow==10.1.0
 pycodestyle==2.11.1
 pytz==2023.3.post1
 setuptools==69.0.2
