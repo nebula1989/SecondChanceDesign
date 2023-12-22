@@ -4,5 +4,3 @@ from .base import *
 DEBUG = True
 ALLOWED_HOSTS = ['*']
 
-MEDIA_ROOT = 'media'
-MEDIA_URL = '/media/'
