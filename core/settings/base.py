@@ -1,8 +1,9 @@
 import os
 import environ
+from pathlib import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Assets Management
@@ -124,7 +125,7 @@ STATICFILES_DIRS = (
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = 'C:\\Users\\benwa\\Documents\\My Programming\\SecondChanceDesign\\media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 #############################################################
