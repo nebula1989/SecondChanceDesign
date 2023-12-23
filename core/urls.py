@@ -6,9 +6,10 @@ from django.urls import path
 from django.contrib import admin
 from django.urls import path, include  # add this
 
-urlpatterns = [
-    path('admin/', admin.site.urls),          # Django admin route
+urlpatterns = [         # Django admin route
     path('', include("apps.home.urls"))
+    path('', include("apps.photo.urls"))
+
 ]
 
 # Ensure that this is configured to serve media files only in DEBUG mode
