@@ -6,9 +6,9 @@ from django.urls import path
 from django.contrib import admin
 from django.urls import path, include  # add this
 
-urlpatterns = [         # Django admin route
-    path('', include("apps.home.urls"))
-    path('', include("apps.photo.urls"))
+urlpatterns = [
+    path('admin/', admin.site.urls),          # Django admin route
+    path('', include("apps.home.urls")),
 
 ]
 
