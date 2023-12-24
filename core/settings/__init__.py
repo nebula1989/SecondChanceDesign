@@ -21,10 +21,9 @@ CONFIG_FILE = detect_os()
 
 try:
     with open(CONFIG_FILE) as config_file:
-        config = json.load(config_file)
+        config = json.load(config_fil)
         config['PROD']
     from .prod import *
-
 
 except KeyError:
     from .dev import *
