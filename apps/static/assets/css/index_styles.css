@@ -1,11 +1,45 @@
 #header-pic {
   display: block;
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  #header-pic {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 #gallery_btns {
   color: black;
+}
+
+.carousel-image {
+  max-height: 500px; /* Adjust this value as needed */
+  max-width: 100%;
+  margin: auto;
+}
+
+/* For portrait mode on mobile devices */
+@media (max-width: 767px) and (orientation: portrait) {
+  .carousel-image {
+    max-height: 300px; /* Adjust for portrait mode */
+  }
+}
+
+/* For landscape mode on mobile devices */
+@media (max-width: 930px) and (orientation: landscape) {
+  .carousel-image {
+    max-height: 250px; /* Adjust for landscape mode */
+    max-width: 65%;
+
+  }
 }
 
 

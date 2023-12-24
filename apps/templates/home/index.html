@@ -3,8 +3,7 @@
 {% load custom_filters %}
 
 {% block title %}Furniture Refinishing{% endblock title %}
-{% block meta_content %} Second Chance Design provides custom furniture refinishing service in Raleigh, NC and the
-    surrounding areas. {% endblock meta_content %}
+{% block meta_content %}Second Chance Design specializes in custom furniture refinishing, restoring the essence of old pieces into modern treasures, proudly serving Raleigh, NC, and surrounding areas.{% endblock meta_content %}
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}
@@ -46,13 +45,12 @@
         <div class="container">
             <div class="row">
                 <div class="col ms-auto text-center">
-                    <p class="mt-4 font-weight-light">Second Chance Design provides custom furniture refinishing services in Raleigh, NC
-                        and the surrounding areas.</p>
+                    <p class="mt-4 font-weight-light" style="font-size: 20px;">Second Chance Design specializes in custom furniture refinishing, restoring the essence of old pieces into modern treasures, proudly serving Raleigh, NC, and surrounding areas.</p>
                 </div>
-
             </div>
         </div>
     </div>
+    
     <!-- -------   END PRE-FOOTER 2 - simple social line w/ title & 3 buttons    -------- -->
 
     <div class="container text-center w-lg-50" id="examples" style="background-color: white; padding: 2%">
@@ -61,7 +59,7 @@
             <div class="carousel-inner">
                 {% for index, image_url in images|enumerate %}
                 <div class="carousel-item {% if index == 0 %}active{% endif %}">
-                    <img src="{{ image_url }}" class="d-block w-100" alt="Image">
+                    <img src="{{ image_url }}" class="d-block w-100 carousel-image" alt="Image">
                 </div>
                 {% endfor %}
             </div>
@@ -75,18 +73,19 @@
             </a>
         </div>
         
+        
 
 
     <!-- Testimonies -->
     <section class="py-7">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mx-auto text-center">
+                <div class="col-lg-6 mx-auto text-center ">
                     <h2 class="blue mb-0">Testimonies</h2>
                     <p class="purple lead">People all over the triangle enjoy our services.</p>
                 </div>
             </div>
-            <div class="row mt-6">
+            <div class="row mt-6 row justify-content-center">
                 <div class="col-lg-4 col-md-8">
                     <div class="card card-plain">
                         <div class="card-body">

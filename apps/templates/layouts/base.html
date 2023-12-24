@@ -1,70 +1,51 @@
-<!--
-=========================================================
-* Soft UI Design System - v1.0.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/soft-ui-design-system
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     <meta name="keywords" content="Furniture Refinishing, Furniture Restoration, Furniture Painting">
     <meta name="description" content="{% block meta_content %} {{ content }} {% endblock meta_content %}">
-    <meta property="og:url" content="http://www.secondchance.design/">
-    <meta property="og:site_name" content="SecondChanceDesign">
-    <meta property="og:title" content="Second Chance Design">
-    <meta property="og:description"
-          content="Second Chance Design: Custom Furniture Refinishing and Painting. Give Your Furniture a New Look..">
-    <meta property="og:image"
-          content="http://www.secondchance.design/static/assets/img/SecondChanceLogo.png">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:width" content="1200">
+    <!-- Add canonical URL to avoid duplicate content issues -->
+    <link rel="canonical" href="http://www.secondchance.design/" />
 
+    <!-- Open Graph meta tags for social media -->
+    <meta property="og:url" content="http://www.secondchance.design/" />
+    <meta property="og:site_name" content="SecondChanceDesign" />
+    <meta property="og:title" content="Second Chance Design - {% block title %}{% endblock %}" />
+    <meta property="og:description" content="Second Chance Design: Custom Furniture Refinishing and Painting. Give Your Furniture a New Look." />
+    <meta property="og:image" content="http://www.secondchance.design/static/assets/img/SecondChanceLogo.png" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="1200" />
 
-    <title>
-        Second Chance Design - {% block title %}{% endblock %}
-    </title>
-
-    <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
+    <!-- Fonts and icons -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Nucleo Icons -->
-    <link href="{{ ASSETS_ROOT }}/css/nucleo-icons.css" rel="stylesheet"/>
-    <link href="{{ ASSETS_ROOT }}/css/nucleo-svg.css" rel="stylesheet"/>
+    <link href="{{ ASSETS_ROOT }}/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="{{ ASSETS_ROOT }}/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <link href="{{ ASSETS_ROOT }}/css/nucleo-svg.css" rel="stylesheet"/>
     <!-- CSS Files -->
-    <link id="pagestyle" href="{{ ASSETS_ROOT }}/css/soft-design-system.css?v=1.0.1" rel="stylesheet"/>
+    <link id="pagestyle" href="{{ ASSETS_ROOT }}/css/soft-design-system.css?v=1.0.1" rel="stylesheet" />
 
     <!-- Specific CSS goes HERE -->
-    {% block stylesheets %}{% endblock stylesheets %}
+    {% block stylesheets %}{% endblock %}
 
 </head>
 
-<body class="{% block body_class %}{% endblock body_class %}">
+<body class="{% block body_class %}{% endblock %}">
 
-{% include "includes/navigation.html" %}
+    {% include "includes/navigation.html" %}
 
-{% block content %}
+    {% block content %}{% endblock %}
 
-{% endblock content %}
+    {% include "includes/scripts.html" %}
 
-
-{% include "includes/scripts.html" %}
-
-<!-- Specific JS goes HERE -->
-{% block javascripts %}{% endblock javascripts %}
+    <!-- Specific JS goes HERE -->
+    {% block javascripts %}{% endblock %}
 
 </body>
+
 </html>
