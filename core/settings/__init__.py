@@ -21,7 +21,7 @@ CONFIG_FILE = detect_os()
 
 try:
     with open(CONFIG_FILE) as config_file:
-        config = json.load(config_fil)
+        config = json.load(config_file)
         config['PROD']
     from .prod import *
 
