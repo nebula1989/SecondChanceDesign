@@ -1,19 +1,78 @@
+.index-page {
+  background-color: #f8f0f8; /* Slightly off-white color */
+}
+
 #header-pic {
   display: block;
   max-width: 50%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
 }
 
-@media (max-width: 767px) {
+#tagline, #nav-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: x-large;
+  /* Add other desired styles */
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
   #header-pic {
     display: block;
     max-width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    
   }
+}
+
+@media (max-width: 930px) and (orientation: landscape) {
+  #header-pic {
+    display: block;
+    max-width: 55%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    
+  }
+}
+
+#nav-title {
+  font-size: large;
+  width: auto;
+  color: darkmagenta;
+  text-decoration: none;
+  white-space: nowrap;
+
+}
+
+.navbar .navbar-nav .nav-link p {
+  white-space: nowrap;
+  font-size: small;
+}
+
+
+
+/*HOVER Stuff*/
+
+.nav-link:hover {
+  background-color: #ded3e2; /* Change this to the shading color you want */
+  border-radius: 5px;
+}
+
+#nav-title:hover {
+  background-color: #dcd4dd; /* Change this to the shading color you want */
+  border-radius: 5px;
+}
+
+/*END HOVER stuff*/
+
+.navbar .container-fluid .font-weight-bolder {
+  white-space: nowrap;
+  width: 50px;
 }
 
 #gallery_btns {
@@ -41,7 +100,6 @@
 
   }
 }
-
 
 .gallery-container {
   padding: 20px;

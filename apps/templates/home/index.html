@@ -45,7 +45,7 @@
         <div class="container">
             <div class="row">
                 <div class="col ms-auto text-center">
-                    <p class="mt-4 font-weight-light" style="font-size: 20px;">Second Chance Design specializes in custom furniture refinishing, restoring the essence of old pieces into modern treasures, proudly serving Raleigh, NC, and surrounding areas.</p>
+                    <p id="tagline" class="mt-4 font-weight-light">Second Chance Design specializes in custom furniture refinishing, restoring the essence of old pieces into modern treasures, proudly serving Raleigh, NC, and surrounding areas.</p>
                 </div>
             </div>
         </div>
@@ -57,21 +57,21 @@
 
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                {% for index, image_url in images|enumerate %}
-                <div class="carousel-item {% if index == 0 %}active{% endif %}">
-                    <img src="{{ image_url }}" class="d-block w-100 carousel-image" alt="Image">
-                </div>
-                {% endfor %}
+              {% for index, image_url in images|enumerate %}
+              <div class="carousel-item {% if index == 0 %}active{% endif %}">
+                <img src="{{ image_url }}" class="d-block w-100 carousel-image" alt="Image">
+              </div>
+              {% endfor %}
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
             </a>
-        </div>
+          </div>
         
         
 
@@ -278,7 +278,7 @@
 {% block javascripts %}
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-    <script src="{{ ASSETS_ROOT }}/js/soft-design-system.min.js?v=1.0.1" type="text/javascript"></script
+    <script src="{{ ASSETS_ROOT }}/js/soft-design-system.min.js?v=1.0.1" type="text/javascript"></script>
 
    
     <!-- Bootstrap JS and dependencies -->
