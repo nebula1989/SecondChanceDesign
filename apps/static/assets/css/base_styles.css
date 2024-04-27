@@ -19,3 +19,19 @@ p, h2, h6, i, a, li, h3 {
   border-radius: 25px;
 
 }
+
+/* Style for Facebook icon */
+.fab.fa-facebook-square {
+    color: #3b5998; /* Facebook Blue - Change to any color you prefer */
+}
+
+/* Style for Instagram icon */
+.fab.fa-instagram {
+    color: #E1306C; /* Instagram Gradient Pink - Change to any color you prefer */
+}
+
+.btn-info, .btn-primary {
+    background-color: transparent !important; /* Makes background transparent */
+    border: none !important; /* Removes border */
+}
+
