@@ -2,10 +2,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.http import HttpResponseRedirect, HttpResponse
-from django.urls import path, re_path
+from django.urls import path, re_path, include
+from django.contrib.sitemaps.views import sitemap
+from apps.home.sitemaps import StaticViewSitemap
+from django.contrib.sites.shortcuts import get_current_site
 
-from django.contrib import admin
-from django.urls import path, include  # add this
+sitemaps = {
+    'static': StaticViewSitemap,
+}
 
 def robots_txt(request):
     lines = [
@@ -14,6 +18,12 @@ def robots_txt(request):
         "Allow: /apps/",
         "Allow: /core/"
     ]
+    
+    # Dynamically add sitemap URL
+    current_site = get_current_site(request)
+    sitemap_url = f"Sitemap: http://secondchance.design/sitemap.xml"
+    lines.append(sitemap_url)
+    
     return HttpResponse("\n".join(lines), content_type="text/plain")
 
 urlpatterns = [
@@ -23,6 +33,7 @@ urlpatterns = [
     
     path('', include("apps.home.urls")),
     path('robots.txt', robots_txt),  # URL for robots.txt
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 
 ]
 
