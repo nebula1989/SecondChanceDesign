@@ -10,8 +10,9 @@ from django.urls import path, include  # add this
 def robots_txt(request):
     lines = [
         "User-agent: *",
-        "Disallow: /",
-        "Allow: /apps/"
+        "Disallow: /venv/",
+        "Allow: /apps/",
+        "Allow: /core/"
     ]
     return HttpResponse("\n".join(lines), content_type="text/plain")
 
