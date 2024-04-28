@@ -21,7 +21,7 @@ def robots_txt(request):
     
     # Dynamically add sitemap URL
     current_site = get_current_site(request)
-    sitemap_url = f"Sitemap: http://secondchance.design/sitemap.xml"
+    sitemap_url = f"Sitemap: https://secondchance.design/sitemap.xml"
     lines.append(sitemap_url)
     
     return HttpResponse("\n".join(lines), content_type="text/plain")
