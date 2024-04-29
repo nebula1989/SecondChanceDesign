@@ -8,7 +8,7 @@ from apps.home.sitemaps import StaticViewSitemap
 from django.contrib.sites.shortcuts import get_current_site
 
 sitemaps = {
-    'static': StaticViewSitemap,
+    'static': StaticViewSitemap(),
 }
 
 def robots_txt(request):
