@@ -1,6 +1,7 @@
 # my custom added stuff
 media/
 staticfiles/
+apps/static/assets/img/before_after/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
