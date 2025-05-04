@@ -6,6 +6,9 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+from . import secrets
+SECRET_KEY = secrets.SECRET_KEY
+
 # Assets Management
 ASSETS_ROOT = '/static/assets'
 

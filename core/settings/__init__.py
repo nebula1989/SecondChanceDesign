@@ -1,31 +1,10 @@
-import json
-import platform
-from distro import linux_distribution
+import os
 
-def detect_os():
-    system = platform.system()
-    
-    if system == 'Windows':
-        # Do something for Windows
-        config_file = "C:\\Users\\benwa\\etc\\secondchance_config.json"
-        # Your Windows-specific code here
-            
-    else:
-        config_file = '/etc/secondchance_config.json'
+# Default to 'dev' if DJANGO_ENV is not set
+ENVIRONMENT = os.getenv('DJANGO_ENV', 'development')
 
-
-    return config_file
-
-
-CONFIG_FILE = detect_os()
-
-try:
-    with open(CONFIG_FILE) as config_file:
-        config = json.load(config_file)
-        config['PROD']
+if ENVIRONMENT == 'production':
     from .prod import *
-
-except KeyError:
+else:
     from .dev import *
 
-SECRET_KEY = config['SECRET_KEY']
