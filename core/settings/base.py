@@ -2,10 +2,15 @@ import os
 import environ
 from pathlib import Path
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# Initialize environment variables
+env = environ.Env()
+environ.Env.read_env()
+
+# Build base paths
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Secret Key (loaded from secrets module)
 from . import secrets
 SECRET_KEY = secrets.SECRET_KEY
 
@@ -13,7 +18,6 @@ SECRET_KEY = secrets.SECRET_KEY
 ASSETS_ROOT = '/static/assets'
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.contenttypes',
@@ -21,8 +25,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.home',  # Enable the inner home (home)
-    'apps.photo'
+    'apps.home',
+    'apps.photo',
 ]
 
 MIDDLEWARE = [
@@ -37,10 +41,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'core.urls'
-LOGIN_REDIRECT_URL = "home"  # Route defined in home/urls.py
-LOGOUT_REDIRECT_URL = "home"  # Route defined in home/urls.py
-TEMPLATE_DIR = os.path.join(BASE_DIR, 'apps', 'templates')
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'apps', 'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -60,10 +64,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-if os.environ.get('DB_ENGINE') and os.environ.get('DB_ENGINE') == "mysql":
+# Database setup
+if os.environ.get('DB_ENGINE') == "mysql":
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
@@ -78,58 +80,32 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'db.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
 
 # Password validation
-# https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
 # Internationalization
-# https://docs.djangoproject.com/en/3.0/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
-#############################################################
-# SRC: https://devcenter.heroku.com/articles/django-assets
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(CORE_DIR, '../staticfiles')
+# Static file settings (used in both dev and prod)
 STATIC_URL = '/static/'
 
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
+STATICFILES_DIRS = [
     os.path.join(CORE_DIR, '../apps/static'),
-)
-
+]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
-#############################################################
-#############################################################
