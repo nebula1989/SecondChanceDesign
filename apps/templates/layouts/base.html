@@ -20,8 +20,10 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:width" content="1200" />
 
-    <!-- Fonts and icons -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@400;500&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+
     <!-- Nucleo Icons -->
     <link href="{{ ASSETS_ROOT }}/css/nucleo-icons.css" rel="stylesheet" />
     <link href="{{ ASSETS_ROOT }}/css/nucleo-svg.css" rel="stylesheet" />
@@ -32,10 +34,10 @@
     <!-- CSS Files -->
     <link id="pagestyle" href="{{ ASSETS_ROOT }}/css/soft-design-system.css?v=1.0.1" rel="stylesheet" />
 
-
     <!-- Specific CSS goes HERE -->
     {% block stylesheets %}{% endblock %}
 </head>
+
 
 
 <body class="{% block body_class %}{% endblock %}">
